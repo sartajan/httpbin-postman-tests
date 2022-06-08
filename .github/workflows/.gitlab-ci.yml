@@ -1,10 +1,12 @@
 stages:
- - test
+  - test
+
+on: [push]
 
 postman_tests:
- stage: test
- image: 
-     name: postman/newman_alpine33
-     entrypoint: [""]
- script:
-   - newman --version
+  stage: test
+  image: 
+    name: postman/newman_alpine33
+    entrypoint: [""]
+  script:
+    newman --version
